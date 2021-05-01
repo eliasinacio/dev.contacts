@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Oswald:wght@300&display=swap');
+
+:root {
+  --bossanova: #3c2a57;
+  --viola: #cb98b6;
+  --lavander-purple: #8e77a8;
+  --amethyst-smoke: #a88db4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: #0B486B;
+}
+
+.contact-card {
+  width: 520px;
+  height: 260px;
+  
+  display: flex;
+  align-items: center;
+  
+  border: 6px solid #dddddd;
+  border-radius: 8px;
+  background-color: #CFC1B4;
+}
+
+.contact-icon {
+  width: 180px;
+  height: 180px;
+  
+  border: 6px solid #dddddd;
+  border-radius: 50%;
+  
+  margin: 0 10px 0 20px;
+}
+
+.contact-data {
+  display: flex;
+  flex-direction: column;
+  
+  height: 160px;
+  margin: 10px;
+  color: #2a2f33;
+}
+
+.contact-data h2 {
+  font-family: 'Antonio', sans-serif;
+  margin: 10px 0;
+}
+
+.contact-data p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13pt;
+  margin: 2px 0;
+}
+
+.contact-links {
+  position: relative;
+  bottom: 0;
+  
+  display: flex;
+  padding: 2px;
+  
+  height: 52px;
+  margin: 20px 0;
+}
+
+.contact-links a {
+  margin: 4px 4px 4px 0;
+}
+
+.contact-links img {
+  width: 32px;
+}
+
+/*  ======= TRANSITIONS/ANIMATIONS */
+.contact-card:hover {
+  transform: scale(1.01);
+  transition: .1s;
+}
+
+.contact-links a:hover {
+  transform: scale(1.15);
+  transition: .2s;
+}

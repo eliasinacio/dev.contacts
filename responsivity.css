@@ -1,0 +1,31 @@
+/* ======= RESPONSIVITY */
+@media (max-width: 560px) {
+  .contact-card {
+    width: 340px;
+    height: 200px;
+  }
+  
+  .contact-icon {
+    width: 150px;
+    height: 150px;
+    
+    margin: 5px;
+  }
+  
+  .contact-data h2 {
+    font-size: 14pt;
+  }
+  
+  .contact-data p {
+    font-size: 12pt;
+  }
+  
+  .contact-links {
+    margin-top: 10px;
+    height: 32px;
+  }
+  
+  .contact-links a {
+    margin-left: 0;
+  }
+}

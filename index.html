@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="./responsivity.css">
   <link rel="stylesheet" href="./add-contact-card.css">
+  <link rel="stylesheet" href="./modal.css">
 </head>
 <body>
 
-  <section class="contacts">
+  <main class="contacts">
 
     <div class="contact-card add-contact">
       <h1> + Add new contact</h1>
@@ -22,7 +23,7 @@
       <img class="contact-icon" src="https://i.pinimg.com/originals/b2/5a/ec/b25aecc9ecc908ec35e3f0385eb9d60a.jpg"/>
       
       <div class="contact-data">
-        <h2 class="contact-name">Yuji Itadori</h2>
+        <h2 class="contact-name">Yuji Itadoriaaaaaa</h2>
         <p class="contact-num">(88) 98888-8888</p>
         <p class="contact-email">yujiitadori<wbr/>@mail.com</p>
         
@@ -33,11 +34,24 @@
           <a id="linkedin" href="https://linkedin.com/in/eliasinacio0/" target="_blank"><img src="https://img.icons8.com/fluent-systems-filled/48/ffffff/linkedin.png"/></a>
         </div>
       </div>
-      
-    </div>
-    
+    </div>    
   </div>
-</section>
+</main>
+
+<div class="modal-background activated"> 
+  <div class="modal">
+    <button id="cancelBtn">X</button>
+
+    <form id="contact" action="" method="post">
+
+        <label for="input-name">Nome:</label>
+        <input type="text" name="input-name" id="input-name" maxlength="18">
+
+        <label for=""></label>
+        <input type="text">
+    </form>
+  </div>
+</div>
 
 <script src="./scripts.js"></script>
 </body>

@@ -1,20 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Oswald:wght@300&display=swap');
 
-:root {
-  --bossanova: #3c2a57;
-  --viola: #cb98b6;
-  --lavander-purple: #8e77a8;
-  --amethyst-smoke: #a88db4;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  height: 100vh;
-  
   display: flex;
   justify-content: center;
   
@@ -63,7 +54,7 @@ body {
 
 .contact-data p {
   font-family: 'Oswald', sans-serif;
-  font-size: 13pt;
+  font-size: 14pt;
   margin: 2px 0;
 }
 
@@ -96,3 +87,4 @@ body {
   transform: scale(1.15);
   transition: .2s;
 }
+

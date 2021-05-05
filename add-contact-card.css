@@ -4,14 +4,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  cursor: pointer;
 }
 
 .add-contact h1 {
   color: #2a2f33;
   font-family: 'Antonio', sans-serif;
   font-size: 14pt;
+  
+  cursor: pointer;
 }
 
 .add-contact h1:hover {

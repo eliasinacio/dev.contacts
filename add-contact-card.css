@@ -1,20 +1,20 @@
 .add-contact {
+  height: 100px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.add-contact img {
-  margin-bottom: 10px;
+  
+  cursor: pointer;
 }
 
 .add-contact h1 {
   color: #2a2f33;
   font-family: 'Antonio', sans-serif;
   font-size: 14pt;
-  cursor: pointer;
 }
 
 .add-contact h1:hover {
   color: #fff;
 }
+

@@ -14,6 +14,26 @@ body {
   background-color: #0B486B;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  z-index: -1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+
+  text-align: center;
+
+  font-family: 'Antonio', sans-serif;
+  color: #ffa697;
+  font-size: 2rem;
+}
+
 .contact-card {
   width: 520px;
   height: 260px;

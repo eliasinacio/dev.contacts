@@ -86,7 +86,7 @@ input[type="image"] {
   
   cursor: pointer;
   border: none;
-  border-radius: 5%;
+  border-radius: 4px;
 }
 
 #cancelBtn {

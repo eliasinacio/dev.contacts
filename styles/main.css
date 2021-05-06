@@ -57,34 +57,8 @@ body {
   font-size: 14pt;
   margin: 2px 0;
 }
-
-.contact-links {
-  position: relative;
-  bottom: 0;
-  
-  display: flex;
-  padding: 2px;
-  
-  height: 52px;
-  margin: 20px 0;
-}
-
-.contact-links a {
-  margin: 4px 4px 4px 0;
-}
-
-.contact-links img {
-  width: 32px;
-}
-
 /*  ======= TRANSITIONS/ANIMATIONS */
 .contact-card:hover {
   transform: scale(1.01);
   transition: .1s;
 }
-
-.contact-links a:hover {
-  transform: scale(1.15);
-  transition: .2s;
-}
-

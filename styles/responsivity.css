@@ -12,24 +12,15 @@
     margin: 5px;
   }
   
+  .contact-data {
+    height: 120px;
+  }
+
   .contact-data h2 {
     font-size: 12pt;
   }
   
   .contact-data p {
     font-size: 10pt;
-  }
-  
-  .contact-links {
-    margin-top: 10px;
-    height: 32px;
-  }
-  
-  .contact-links a {
-    margin-left: 0;
-  }
-
-  .contact-links img {
-    width: 26px;
   }
 }

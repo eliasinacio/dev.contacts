@@ -13,9 +13,9 @@
 </head>
 <body>
 
-  <main class="contacts">
+  <main>
     
-  <ul>
+  <ul class="contacts">
     <li class="contact-card add-contact">
       <h1 onclick="Modal.open()"> + Add new contact</h1>
     </li>
@@ -26,16 +26,27 @@
 
   <div class="modal-background"> 
     <div class="modal">
-      <button id="cancelBtn" onclick="Modal.close()">X</button>
-
+      
       <form id="contact" action="" method="post">
+        
+        <div id="icon-input-group" class="input-group">
+          <input type="image">
+        </div>
 
-          <label for="input-name">Nome:</label>
+        <div id="data-input-group" class="input-group">
+          <label for="input-name">Name</label>
           <input type="text" name="input-name" id="input-name" maxlength="18">
           <br>
           <label for="input-phone">Phone</label>
-          <input type="tel" name="input-phone" id="input-phone"  pattern="[0-9]{33}-[0-9]{2}-[0-9]{3}">
-          <small>Like (000) 90000-0000</small>
+          <input type="tel" name="input-phone" id="input-phone" placeholder="(DDD) 9XXXX-XXXX" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+          <br>
+          <label for="input-email">Email</label>
+          <input type="email" name="input-email" id="input-email" maxlength="36">
+        </div>
+
+        <button id="cancelBtn" onclick="Modal.close()">Cancel</button>
+        <button id="submitBtn">Add</button>
+
       </form>
     </div>
   </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 /*  ======= MODAL ======== */
 .modal-background {
   position: fixed;
@@ -17,10 +19,13 @@
 }
 
 .modal {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   
   background-color: #fffddd;
+
+  font-family: 'Lato';
+  color: #2a2f33;
 }
 
 .activated {
@@ -28,20 +33,32 @@
   visibility: visible;
 }
 
-/*  ======= FORM ======= */
-#cancelBtn {
-  width: 40px;
+#cancelBtn, #submitBtn {
+  width: 40%;
   height: 40px;
+
+  margin: auto auto;
+
   color: white;
   font-weight: bolder;
-  background-color: tomato;
-
+  
   cursor: pointer;
-
-  position: relative;
-  top: -20px;
-  left: -45px;
-
   border: none;
-  border-radius: 50%;
+  border-radius: 5%;
 }
+
+#cancelBtn {
+  background-color: #ff8181;
+  opacity: 0.8;
+}
+
+#submitBtn {
+  background-color: #5ba4ce;
+  opacity: 0.8;
+}
+
+#cancelBtn:hover, #submitBtn:hover {
+  opacity: 1;
+}
+
+/*  ======= FORM ======= */

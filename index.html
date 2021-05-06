@@ -14,46 +14,32 @@
 <body>
 
   <main class="contacts">
-
-    <div class="contact-card add-contact">
-      <h1 onclick="Modal.open()"> + Add new contact</h1>
-    </div>
     
-    <div class="contact-card">
-      <img class="contact-icon" src="https://i.pinimg.com/originals/b2/5a/ec/b25aecc9ecc908ec35e3f0385eb9d60a.jpg"/>
-      
-      <div class="contact-data">
-        <h2 class="contact-name">Yuji Itadoriaaaaaa</h2>
-        <p class="contact-num">(88) 98888-8888</p>
-        <p class="contact-email">yujiitadori<wbr/>@mail.com</p>
-        
-        <div class="contact-links">
-          <a id="github" href="https://github.com/eliasinacio" target="_blank"><img src="https://img.icons8.com/material-sharp/48/ffffff/github.png"/></a>
-          <a id="instagram" href="https://instagram.com/eu_liaaas" target="_blank"><img src="https://img.icons8.com/fluent-systems-regular/48/ffffff/instagram-new.png"/></a>
-          <a  id="twitter" href="https://twitter.com/eliasinacio_1" target="_blank"><img src="https://img.icons8.com/android/48/ffffff/twitter.png"/></a>
-          <a id="linkedin" href="https://linkedin.com/in/eliasinacio0/" target="_blank"><img src="https://img.icons8.com/fluent-systems-filled/48/ffffff/linkedin.png"/></a>
-        </div>
-      </div>
-    </div>    
+  <ul>
+    <li class="contact-card add-contact">
+      <h1 onclick="Modal.open()"> + Add new contact</h1>
+    </li>
+  </ul>
+  
+  </main>
+
+
+  <div class="modal-background"> 
+    <div class="modal">
+      <button id="cancelBtn" onclick="Modal.close()">X</button>
+
+      <form id="contact" action="" method="post">
+
+          <label for="input-name">Nome:</label>
+          <input type="text" name="input-name" id="input-name" maxlength="18">
+          <br>
+          <label for="input-phone">Phone</label>
+          <input type="tel" name="input-phone" id="input-phone"  pattern="[0-9]{33}-[0-9]{2}-[0-9]{3}">
+          <small>Like (000) 90000-0000</small>
+      </form>
+    </div>
   </div>
-</main>
 
-<div class="modal-background"> 
-  <div class="modal">
-    <button id="cancelBtn" onclick="Modal.close()">X</button>
-
-    <form id="contact" action="" method="post">
-
-        <label for="input-name">Nome:</label>
-        <input type="text" name="input-name" id="input-name" maxlength="18">
-        <br>
-        <label for="input-phone">Phone</label>
-        <input type="tel" name="input-phone" id="input-phone"  pattern="[0-9]{33}-[0-9]{2}-[0-9]{3}">
-        <small>Like (000) 90000-0000</small>
-    </form>
-  </div>
-</div>
-
-<script src="./scripts.js"></script>
+  <script src="./scripts.js"></script>
 </body>
 </html>

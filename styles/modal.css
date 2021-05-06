@@ -19,13 +19,17 @@
 }
 
 .modal {
-  width: 400px;
-  height: 400px;
-  
+  width: 420px;
+  height: 440px;
+  padding: 20px;
+
   background-color: #fffddd;
 
   font-family: 'Lato';
   color: #2a2f33;
+
+  border: 6px solid #ddd;
+  border-radius: 8px;
 }
 
 .activated {
@@ -33,11 +37,49 @@
   visibility: visible;
 }
 
+/*  ======= FORM ======= */
+form {
+  width: 420px;
+  height: 300px;
+  
+  padding: 10px;
+  gap: 6px;
+}
+
+.input-group {
+  margin: auto;
+}
+
+label {
+  font-size: 13pt;
+}
+
+input {
+  margin: 5px 10px;
+  width: 300px;
+}
+
+input[type="image"] {
+  width: 200px;
+  height: 86px;
+  
+  margin: auto 100px;
+  text-align: center;
+  
+  background: url(https://img.icons8.com/dusk/64/000000/user-folder.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cancelBtn {
+  margin-left: 10px;
+}
+
 #cancelBtn, #submitBtn {
-  width: 40%;
+  width: 200px;
   height: 40px;
 
-  margin: auto auto;
+  margin: 20px 0;
 
   color: white;
   font-weight: bolder;
@@ -60,5 +102,3 @@
 #cancelBtn:hover, #submitBtn:hover {
   opacity: 1;
 }
-
-/*  ======= FORM ======= */

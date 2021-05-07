@@ -7,27 +7,26 @@
 
 body {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  
-  padding-top: 30vh;
 
   background-color: #0B486B;
 }
 
 header {
-  position: fixed;
-  top: 0;
   width: 100%;
-
-  z-index: -1;
+  margin-bottom: 100px;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 20vh;
 
   text-align: center;
+
+  background-color: #0c3d58;
 
   font-family: 'Antonio', sans-serif;
   color: #ffa697;
@@ -81,4 +80,18 @@ header {
 .contact-card:hover {
   transform: scale(1.01);
   transition: .1s;
+}
+
+/*  ========  FOOTER  =======  */
+footer {
+  width: 100%;
+  height: 10vh;
+  margin-top: 100px;
+
+  text-align: center;
+  padding-top: 50px;
+
+  background-color: #0c3d58;
+  font-family: 'Antonio', sans-serif;
+  color: #dddddd;
 }

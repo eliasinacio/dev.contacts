@@ -41,8 +41,18 @@ contacts.all.forEach( (contact) => {
   document.querySelector('.contacts').appendChild(card);
 });
 
+const Form = {
+  name: document.querySelector('#input-name'),
+  icon: document.querySelector('#input-icon'),
+  phone: document.querySelector('#input-phone'),
+  email: document.querySelector('#input-email'),
 
-// GET VALUES
-function getValues() {
-  console.log("submeteu")
+  getValues() {
+    return {
+      name: Form.name.value,
+      icon: Form.icon.value,
+      phone: Form.phone.value,
+      email: Form.email.value
+    }
+  }
 }

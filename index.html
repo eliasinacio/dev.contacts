@@ -7,9 +7,9 @@
   <link rel="shortcut icon" href="https://img.icons8.com/officel/160/4a90e2/contacts.png" type="image/x-icon">
   <title>Contacts List</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/responsivity.css">
-  <link rel="stylesheet" href="./styles/add-contact-card.css">
   <link rel="stylesheet" href="./styles/modal.css">
+  <link rel="stylesheet" href="./styles/add-contact-card.css">
+  <link rel="stylesheet" href="./styles/responsivity.css">
 </head>
 <body>
   <header><h1> Contacts list</h1> </header>
@@ -25,14 +25,13 @@
   </main>
 
 
-  <div class="modal-background"> 
+  <div class="modal-background activated"> 
     <div class="modal">
       
       <form id="form-input" action="" method="post">
         
         <div id="icon-input-group" class="input-group">
           <label for="input-url-icon">Enter a image or a link</label>
-          <input id="input-icon" type="image" alt="Upload an image">
           <input type="url" name="input-url-icon" id="input-url-icon" placeholder="link to an image">
         </div>
 
@@ -42,16 +41,18 @@
 
           <br>
           <label for="input-phone">Phone</label> <br>
-          <input type="tel" name="input-phone" id="input-phone" required placeholder="(DDD) 9XXXX-XXXX" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+          <input type="tel" name="input-phone" id="input-phone" required maxlength="11" minlength="9" placeholder="phone number"><br>
           
           <br>
           <label for="input-email">Email</label> <br>
           <input type="email" name="input-email" id="input-email" maxlength="36" placeholder="contact email">
         </div>
 
-        <button id="cancelBtn" onclick="Modal.close()">Cancel</button>
-        <button id="submitBtn">Add</button>
-
+        <div id="submit-group" class="input-group">
+          <button id="cancelBtn" onclick="Modal.close()">Cancel</button>
+          <button id="submitBtn" onsubmit="">Add</button>
+        </div>
+        
       </form>
     </div>
   </div>

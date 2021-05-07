@@ -1,5 +1,6 @@
+
 /* ======= RESPONSIVITY */
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .contact-card {
     width: 300px;
     height: 180px;
@@ -22,5 +23,92 @@
   
   .contact-data p {
     font-size: 10pt;
+  }
+
+  /*  ======= MODAL ======== */
+  .modal-background {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    z-index: -1;
+    visibility: hidden;
+  }
+
+  .modal {
+    width: 300px;
+    height: 380px;
+    padding: 20px;
+
+    background-color: #fffddd;
+
+    font-family: 'Lato';
+    color: #2a2f33;
+  }
+
+  .activated {
+    z-index: 1;
+    visibility: visible;
+  }
+
+  /*  ======= FORM ======= */
+  form {
+    width: 320px;
+  }
+
+  .input-group {
+    width: 320px;
+  }
+
+  label {
+    font-size: 11pt;
+    margin: 2px auto;
+  }
+
+  input {
+    margin: 2px auto;
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  input:focus {
+    border: none;
+    width: 250px;
+    height: 30px;
+    padding: 5px 12px;
+    margin: 2px auto;
+    outline: #6e6e6e solid 1px;
+  }
+
+  #cancelBtn, #submitBtn {
+    width: 135px;
+    height: 40px;
+
+    margin: 10px auto;
+    margin-left: 1px;
+
+    color: white;
+    font-weight: bolder;
+    
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+  }
+
+  #cancelBtn {
+    background-color: #ff8181;
+  }
+  
+  #submitBtn {
+    background-color: #5ba4ce;
   }
 }

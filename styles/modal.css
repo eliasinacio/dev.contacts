@@ -20,16 +20,13 @@
 
 .modal {
   width: 420px;
-  height: 440px;
+  height: 420px;
   padding: 20px;
 
   background-color: #fffddd;
 
   font-family: 'Lato';
   color: #2a2f33;
-
-  border: 6px solid #ddd;
-  border-radius: 8px;
 }
 
 .activated {
@@ -40,46 +37,45 @@
 /*  ======= FORM ======= */
 form {
   width: 420px;
-  height: 300px;
+  height: 400px;
   
   padding: 10px;
   gap: 6px;
 }
 
 .input-group {
-  margin: auto;
+  width: 400px;
+  margin: 10px auto;
 }
 
 label {
-  font-size: 13pt;
+  font-size: 12pt;
+  margin: 5px 5px;
 }
 
 input {
-  margin: 5px 10px;
-  width: 300px;
+  margin: 5px 5px;
+  width: 345px;
+  height: 30px;
+  padding: 5px;
 }
 
-input[type="image"] {
-  width: 200px;
-  height: 86px;
-  
-  margin: auto 100px;
-  text-align: center;
-  
-  background: url(https://img.icons8.com/dusk/64/000000/user-folder.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+input:focus {
+  border: none;
+  width: 340px;
+  height: 30px;
 
-#cancelBtn {
-  margin-left: 10px;
+  padding: 5px 15px;
+  margin-left: 5px;
+
+  outline: #2a2f33 solid 1px;
 }
 
 #cancelBtn, #submitBtn {
-  width: 200px;
+  width: 182px;
   height: 40px;
 
-  margin: 20px 0;
+  margin: 20px auto;
 
   color: white;
   font-weight: bolder;
@@ -92,13 +88,14 @@ input[type="image"] {
 #cancelBtn {
   background-color: #ff8181;
   opacity: 0.8;
+  margin-left: 5px;
+}
+
+#cancelBtn:hover, #submitBtn:hover {
+  opacity: 1;
 }
 
 #submitBtn {
   background-color: #5ba4ce;
   opacity: 0.8;
-}
-
-#cancelBtn:hover, #submitBtn:hover {
-  opacity: 1;
 }

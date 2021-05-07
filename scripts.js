@@ -43,3 +43,6 @@ contacts.all.forEach( (contact) => {
 
 
 // GET VALUES
+function getValues() {
+  console.log("submeteu")
+}

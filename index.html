@@ -41,7 +41,7 @@
 
           <br>
           <label for="input-phone">Phone</label> <br>
-          <input type="tel" name="input-phone" id="input-phone" required maxlength="11" minlength="9" placeholder="phone number"><br>
+          <input type="tel" name="input-phone" id="input-phone" required autocomplete="tel" maxlength="11" minlength="9" placeholder="phone number"><br>
           
           <br>
           <label for="input-email">Email</label> <br>
@@ -50,7 +50,7 @@
 
         <div id="submit-group" class="input-group">
           <button id="cancelBtn" onclick="Modal.close()">Cancel</button>
-          <button id="submitBtn" onsubmit="">Add</button>
+          <button id="submitBtn" onclick="getValues()">Add</button>
         </div>
         
       </form>

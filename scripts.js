@@ -36,9 +36,12 @@ const contacts = {
 }
 
 contacts.all.forEach( (contact) => {
-  const card = document.createElement('div')
+  const card = document.createElement('li');
+
+  card.id = `c${contacts.all.indexOf(contact)}`;
+  card.classList.add('contact-card');
+  
   card.innerHTML = `
-  <li class="contact-card">
     <img class="contact-icon" src="${contact.icon}"/>
     <span>${contact.name[0]}</span>
 
@@ -47,7 +50,6 @@ contacts.all.forEach( (contact) => {
       <p class="contact-num">${contact.phone}</p>
       <p class="contact-email">${contact.email}</p>
     </div>
-  </li> 
   `
   if (contact.icon == "") {
     card.querySelector('span').style.zIndex = 1;
@@ -77,3 +79,13 @@ const Form = {
     Storage.set(contacts.all)
   }
 }
+
+// seleção de DDD 
+
+let objectDDD
+
+fetch('https://gist.githubusercontent.com/ThadeuLuz/797b60972f74f3080b32642eb36481a5/raw/50eff700db88f10f5d619b85f8684145b91e1888/dddsBrasileiros.json')
+  .then(response => response.json())
+  .then(data => objectDDD = data);
+
+console.log(objectDDD)

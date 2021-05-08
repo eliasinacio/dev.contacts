@@ -15,10 +15,12 @@
   
   span {
     position: absolute;
-    margin: 10px 0 0 50px;
+    width: 100px;
+    margin: auto 10px -10px;
     z-index: -1;
     cursor: default;
   
+    text-align: center;
     text-transform: uppercase;
     font-family: 'Spartan', sans-serif;
     font-size: 30pt;

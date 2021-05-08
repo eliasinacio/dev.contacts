@@ -20,7 +20,7 @@ const Modal = {
 // GET AND SET STORAGE ITEMS
 const Storage = {
   get() {
-    return JSON.parse(localStorage.getItem("contacts"))
+    return JSON.parse(localStorage.getItem("contacts")) || []
   },
   set(contact) {
     localStorage.setItem("contacts", JSON.stringify(contact))
@@ -55,8 +55,6 @@ contacts.all.forEach( (contact) => {
 
   document.querySelector('.contacts').appendChild(card);
 });
-
-
 
 const Form = {
   name: document.querySelector('#input-name'),

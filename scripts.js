@@ -8,6 +8,12 @@ const Modal = {
   close() {
     document.querySelector('.modal-background')
     .classList.remove('activated');
+    
+    // Apaga os valores ao cancelar
+    Form.name.value = "";
+    Form.icon.value = "";
+    Form.phone.value = "";
+    Form.email.value = "";
   }
 }
 
@@ -22,7 +28,11 @@ const Storage = {
 }
 
 const contacts = {
-  all: Storage.get()
+  all: Storage.get(),
+
+  addContact(contact) {
+    contacts.all.push(contact)
+  }
 }
 
 contacts.all.forEach( (contact) => {
@@ -30,6 +40,7 @@ contacts.all.forEach( (contact) => {
   card.innerHTML = `
   <li class="contact-card">
     <img class="contact-icon" src="${contact.icon}"/>
+    <span>${contact.name[0]}</span>
 
     <div class="contact-data">
       <h2 class="contact-name">${contact.name}</h2>
@@ -38,8 +49,14 @@ contacts.all.forEach( (contact) => {
     </div>
   </li> 
   `
+  if (contact.icon == "") {
+    card.querySelector('span').style.zIndex = 1;
+  }
+
   document.querySelector('.contacts').appendChild(card);
 });
+
+
 
 const Form = {
   name: document.querySelector('#input-name'),
@@ -54,5 +71,11 @@ const Form = {
       phone: Form.phone.value,
       email: Form.email.value
     }
+  },
+
+  submit(event) {
+    const values = Form.getValues()
+    contacts.addContact(values);
+    Storage.set(contacts.all)
   }
 }

@@ -80,12 +80,4 @@ const Form = {
   }
 }
 
-// seleção de DDD 
-
-let objectDDD
-
-fetch('https://gist.githubusercontent.com/ThadeuLuz/797b60972f74f3080b32642eb36481a5/raw/50eff700db88f10f5d619b85f8684145b91e1888/dddsBrasileiros.json')
-  .then(response => response.json())
-  .then(data => objectDDD = data);
-
-console.log(objectDDD)
+// preencher select com DDDs...

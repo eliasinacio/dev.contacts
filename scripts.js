@@ -91,7 +91,7 @@ const DOM = {
       </div>
   
       <div class="card-buttons">
-        <a class="deleteBtn" href="#" onclick="Contacts.removeContact(${Contacts.all.indexOf(contact)})">
+        <a class="deleteBtn" onclick="Contacts.removeContact(${Contacts.all.indexOf(contact)})">
           <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
         </a>
         <a class="whatsappBtn" href="#" onclick="">

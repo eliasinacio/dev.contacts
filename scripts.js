@@ -50,6 +50,11 @@ contacts.all.forEach( (contact) => {
       <p class="contact-num">${contact.phone}</p>
       <p class="contact-email">${contact.email}</p>
     </div>
+
+    <div class="card-buttons">
+      <a class="deleteBtn" href="#">X</a>
+      <a class="whatsappBtn" href="#">W</a>
+    </div>
   `
   if (contact.icon == "") {
     card.querySelector('span').style.zIndex = 1;

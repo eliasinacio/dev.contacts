@@ -44,7 +44,7 @@ header {
   align-items: center;
   justify-content: space-between;
   
-  border: 6px solid #dddddd;
+  border: 5px solid #dddddd;
   border-radius: 8px;
   background-color: #CFC1B4;
 
@@ -106,6 +106,25 @@ span {
   height: 100%;
 }
 
+.deleteBtn {
+  width: 50px;
+  height: 35px;
+  padding-top: 10px;
+  border-top-right-radius: 8px;
+  text-align: center;
+
+  background-color: rgb(255, 130, 108);
+}
+
+.whatsappBtn {
+  width: 50px;
+  height: 40px;
+  padding-top: 10px;
+  margin-right: -5px;
+  text-align: center;
+
+  background-color: #75e082;
+}
 
 
 /*  ======= TRANSITIONS/ANIMATIONS */

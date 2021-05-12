@@ -52,8 +52,12 @@ contacts.all.forEach( (contact) => {
     </div>
 
     <div class="card-buttons">
-      <a class="deleteBtn" href="#">X</a>
-      <a class="whatsappBtn" href="#">W</a>
+      <a class="deleteBtn" href="#">
+        <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
+      </a>
+      <a class="whatsappBtn" href="#">
+        <img src="https://img.icons8.com/pastel-glyph/25/ffffff/whatsapp--v2.png"/>
+      </a>
     </div>
   `
   if (contact.icon == "") {

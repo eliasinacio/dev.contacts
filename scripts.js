@@ -32,6 +32,7 @@ const Contacts = {
   all: Storage.get(),
 
   addContact(contact) {
+    window.location.reload();
     Contacts.all.push(contact);
     App.reload();
   },

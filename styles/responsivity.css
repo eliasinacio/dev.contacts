@@ -36,7 +36,9 @@
   
   .contact-data {
     height: 80%;
-    margin: auto;
+    width: 45%;
+    margin-left: 5px;
+    text-align: start;
   }
 
   .contact-data h2 {

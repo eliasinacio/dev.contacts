@@ -22,23 +22,53 @@ const Storage = {
   get() {
     return JSON.parse(localStorage.getItem("contacts")) || []
   },
+
   set(contact) {
     localStorage.setItem("contacts", JSON.stringify(contact))
   }
 }
 
-const contacts = {
+const Contacts = {
   all: Storage.get(),
 
   addContact(contact) {
-    contacts.all.push(contact)
+    Contacts.all.push(contact);
+    App.reload();
+  },
+
+  removeContact(index) {
+    Contacts.all.splice(index, 1);
+    App.reload()
   }
 }
 
-contacts.all.forEach( (contact) => {
+
+const Form = {
+  name: document.querySelector('#input-name'),
+  icon: document.querySelector('#input-icon'),
+  phone: document.querySelector('#input-phone'),
+  email: document.querySelector('#input-email'),
+  
+  getValues() {
+    return {
+      name: Form.name.value,
+      icon: Form.icon.value,
+      phone: Form.phone.value,
+      email: Form.email.value
+    }
+  },
+  
+  submit(event) {
+    const values = Form.getValues()
+    Contacts.addContact(values);
+    Storage.set(Contacts.all)
+  }
+}
+
+function createNewCard(contact) {
   const card = document.createElement('li');
 
-  card.id = `c${contacts.all.indexOf(contact)}`;
+  card.id = `c${Contacts.all.indexOf(contact)}`;
   card.classList.add('contact-card');
   
   card.innerHTML = `
@@ -52,7 +82,7 @@ contacts.all.forEach( (contact) => {
     </div>
 
     <div class="card-buttons">
-      <a class="deleteBtn" href="#" onclick="deleteThis(${contact.name})">
+      <a class="deleteBtn" href="#" onclick="Contacts.removeContact(${Contacts.all.indexOf(contact)})">
         <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
       </a>
       <a class="whatsappBtn" href="#" onclick="">
@@ -65,34 +95,19 @@ contacts.all.forEach( (contact) => {
   }
 
   document.querySelector('.contacts').appendChild(card);
-});
+}
 
-const Form = {
-  name: document.querySelector('#input-name'),
-  icon: document.querySelector('#input-icon'),
-  phone: document.querySelector('#input-phone'),
-  email: document.querySelector('#input-email'),
-
-  getValues() {
-    return {
-      name: Form.name.value,
-      icon: Form.icon.value,
-      phone: Form.phone.value,
-      email: Form.email.value
-    }
-  },
-
-  submit(event) {
-    const values = Form.getValues()
-    contacts.addContact(values);
-    Storage.set(contacts.all)
+const App = {
+  init() {
+    Contacts.all.forEach( (contact) => createNewCard(contact) );
+    Storage.set(Contacts.all);
+  }, 
+  
+  reload() {
+    document.querySelector('.contacts').innerHTML = "";
+    App.init()
   }
 }
 
-
-// DELETAR CONTATO
-function deleteThis (strin) {
-  console.log(strin)
-}
-
-// Whatsapp
+Storage.get()
+App.init();

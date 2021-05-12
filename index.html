@@ -18,11 +18,12 @@
 
   <main>
     
-  <ul class="contacts">
-    <li class="contact-card add-contact">
+    <div class="contact-card add-contact">
       <h1 onclick="Modal.open()"> + Add new contact</h1>
-    </li>
-  </ul>
+    </div>
+    
+    <ul class="contacts">
+    </ul>
   
   </main>
 
@@ -43,7 +44,7 @@
 
           <br>
           <label for="input-phone">Phone</label> <br>
-          <input type="tel" name="input-phone" id="input-phone"  required autocomplete="tel" maxlength="11" minlength="9" pattern="([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}" placeholder="phone number"><br>
+          <input type="tel" name="input-phone" id="input-phone"  required autocomplete="tel" maxlength="13" minlength="9" placeholder="phone number"><br>
           
           <br>
           <label for="input-email">Email</label> <br>

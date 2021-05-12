@@ -34,12 +34,15 @@ header {
   font-size: 2rem;
 }
 
+/*  ========  CARD  ========*/
+
 .contact-card {
   width: 520px;
   height: 260px;
   
   display: flex;
   align-items: center;
+  justify-content: space-between;
   
   border: 6px solid #dddddd;
   border-radius: 8px;
@@ -55,7 +58,7 @@ header {
   border: 6px solid #dddddd;
   border-radius: 50%;
   
-  margin: 0 10px 0 20px;
+  margin: 0 0 0 20px;
   background-color: #50466e;
 }
 
@@ -78,15 +81,16 @@ span {
 .contact-data {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   
-  height: 160px;
-  margin: 10px;
+  height: 80%;
+  margin-left: -50px;
   color: #2a2f33;
 }
 
 .contact-data h2 {
   font-family: 'Antonio', sans-serif;
-  margin: 10px 0;
+  margin-top: -40px;
 }
 
 .contact-data p {
@@ -94,6 +98,16 @@ span {
   font-size: 14pt;
   margin: 2px 0;
 }
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  
+  height: 100%;
+}
+
+
+
 /*  ======= TRANSITIONS/ANIMATIONS */
 .contact-card:hover {
   transform: scale(1.01);

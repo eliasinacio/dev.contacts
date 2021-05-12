@@ -60,9 +60,16 @@ const Form = {
   },
   
   submit(event) {
-    const values = Form.getValues()
-    Contacts.addContact(values);
-    Storage.set(Contacts.all)
+    event.preventDefault()
+
+    try {
+      const values = Form.getValues();
+      Contacts.addContact(values);
+      Storage.set(Contacts.all);
+      Modal.close();
+    } catch (error) {
+      alert(error.message);
+    }
   }
 }
 

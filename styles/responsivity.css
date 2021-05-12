@@ -31,7 +31,8 @@
   }
   
   .contact-data {
-    height: 120px;
+    height: 80%;
+    margin: auto;
   }
 
   .contact-data h2 {
@@ -40,6 +41,12 @@
   
   .contact-data p {
     font-size: 10pt;
+  }
+
+  .deleteBtn, .whatsappBtn {
+    width: 30px;
+    height: 30px;
+    padding: 5px 0;
   }
 
   /*  ======= MODAL ======== */

@@ -52,10 +52,10 @@ contacts.all.forEach( (contact) => {
     </div>
 
     <div class="card-buttons">
-      <a class="deleteBtn" href="#">
+      <a class="deleteBtn" href="#" onclick="deleteThis(${contact.name})">
         <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
       </a>
-      <a class="whatsappBtn" href="#">
+      <a class="whatsappBtn" href="#" onclick="">
         <img src="https://img.icons8.com/pastel-glyph/25/ffffff/whatsapp--v2.png"/>
       </a>
     </div>
@@ -89,4 +89,10 @@ const Form = {
   }
 }
 
-// preencher select com DDDs...
+
+// DELETAR CONTATO
+function deleteThis (strin) {
+  console.log(strin)
+}
+
+// Whatsapp

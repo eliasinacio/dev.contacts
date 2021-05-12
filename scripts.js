@@ -32,9 +32,9 @@ const Contacts = {
   all: Storage.get(),
 
   addContact(contact) {
-    window.location.reload();
     Contacts.all.push(contact);
     App.reload();
+    window.location.reload();
   },
 
   removeContact(index) {
@@ -66,41 +66,43 @@ const Form = {
   }
 }
 
-function createNewCard(contact) {
-  const card = document.createElement('li');
-
-  card.id = `c${Contacts.all.indexOf(contact)}`;
-  card.classList.add('contact-card');
+const DOM = {
+  createNewCard(contact) {
+    const card = document.createElement('li');
   
-  card.innerHTML = `
-    <img class="contact-icon" src="${contact.icon}"/>
-    <span>${contact.name[0]}</span>
-
-    <div class="contact-data">
-      <h2 class="contact-name">${contact.name}</h2>
-      <p class="contact-num">${contact.phone}</p>
-      <p class="contact-email">${contact.email}</p>
-    </div>
-
-    <div class="card-buttons">
-      <a class="deleteBtn" href="#" onclick="Contacts.removeContact(${Contacts.all.indexOf(contact)})">
-        <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
-      </a>
-      <a class="whatsappBtn" href="#" onclick="">
-        <img src="https://img.icons8.com/pastel-glyph/25/ffffff/whatsapp--v2.png"/>
-      </a>
-    </div>
-  `
-  if (contact.icon == "") {
-    card.querySelector('span').style.zIndex = 1;
-  }
-
-  document.querySelector('.contacts').appendChild(card);
+    card.id = `c${Contacts.all.indexOf(contact)}`;
+    card.classList.add('contact-card');
+    
+    card.innerHTML = `
+      <img class="contact-icon" src="${contact.icon}"/>
+      <span>${contact.name[0]}</span>
+  
+      <div class="contact-data">
+        <h2 class="contact-name">${contact.name}</h2>
+        <p class="contact-num">${contact.phone}</p>
+        <p class="contact-email">${contact.email}</p>
+      </div>
+  
+      <div class="card-buttons">
+        <a class="deleteBtn" href="#" onclick="Contacts.removeContact(${Contacts.all.indexOf(contact)})">
+          <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
+        </a>
+        <a class="whatsappBtn" href="#" onclick="">
+          <img src="https://img.icons8.com/pastel-glyph/25/ffffff/whatsapp--v2.png"/>
+        </a>
+      </div>
+    `
+    if (contact.icon == "") {
+      card.querySelector('span').style.zIndex = 1;
+    }
+  
+    document.querySelector('.contacts').appendChild(card);
+  }  
 }
 
 const App = {
   init() {
-    Contacts.all.forEach( (contact) => createNewCard(contact) );
+    Contacts.all.forEach( (contact) => DOM.createNewCard(contact) );
     Storage.set(Contacts.all);
   }, 
   

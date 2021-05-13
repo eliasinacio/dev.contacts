@@ -34,7 +34,6 @@ const Contacts = {
   addContact(contact) {
     Contacts.all.push(contact);
     App.reload();
-    window.location.reload();
   },
 
   removeContact(index) {

@@ -43,7 +43,6 @@ const Contacts = {
   }
 }
 
-
 const Form = {
   name: document.querySelector('#input-name'),
   icon: document.querySelector('#input-icon'),
@@ -94,7 +93,7 @@ const DOM = {
         <a class="deleteBtn" onclick="Contacts.removeContact(${Contacts.all.indexOf(contact)})">
           <img src="https://img.icons8.com/material-sharp/24/ffffff/trash.png"/>
         </a>
-        <a class="whatsappBtn" href="#" onclick="">
+        <a class="whatsappBtn" href="https://web.whatsapp.com/send?phone=${contact.phone}" target="_blank">
           <img src="https://img.icons8.com/pastel-glyph/25/ffffff/whatsapp--v2.png"/>
         </a>
       </div>

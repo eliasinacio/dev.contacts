@@ -95,6 +95,9 @@ const DOM = {
         <a class="whatsappBtn" href="https://api.whatsapp.com/send?phone=${contact.phone}" target="_blank">
           <img src="https://img.icons8.com/pastel-glyph/25/ffffff/whatsapp--v2.png"/>
         </a>
+        <a class="emailBtn" href="mailto:${contact.phone}" target="_blank">
+          <img src="https://img.icons8.com/material-sharp/25/ffffff/send-mass-email.png"/>
+        </a>
       </div>
     `
     if (contact.icon == "") {

@@ -156,5 +156,14 @@ footer {
 
   background-color: #0c3d58;
   font-family: 'Antonio', sans-serif;
-  color: #dddddd;
+  color: #ddd;
+}
+
+a {
+  color: #ddd;
+}
+
+a:hover {
+  color: #fff;
+  transition: scale(1.4);
 }

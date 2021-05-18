@@ -49,8 +49,8 @@
     font-size: 10pt;
   }
 
-  .deleteBtn, .whatsappBtn {
-    width: 30px;
+  .deleteBtn, .whatsappBtn, .emailBtn {
+    width: 35px;
     height: 30px;
     padding: 5px 0;
   }
